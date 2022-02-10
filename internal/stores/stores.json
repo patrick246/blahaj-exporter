@@ -1331,11 +1331,6 @@
     "countryCode": "jp"
   },
   {
-    "buCode": "509",
-    "name": "長久手",
-    "countryCode": "jp"
-  },
-  {
     "buCode": "496",
     "name": "鶴浜",
     "countryCode": "jp"
@@ -2706,7 +2701,7 @@
     "countryCode": "au"
   },
   {
-    "buCode": "556",
+    "buCode": "385",
     "name": "Rhodes",
     "coordinates": [
       151.083710,

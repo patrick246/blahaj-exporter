@@ -11,6 +11,47 @@ import (
 	"time"
 )
 
+var blahajCountryArtNo = map[string]string{
+	"at": "30373588",
+	"au": "10373589",
+	"be": "30373588",
+	"ca": "90373590",
+	"ch": "30373588",
+	"cn": "10373589",
+	"cz": "30373588",
+	"de": "30373588",
+	"dk": "30373588",
+	"es": "30373588",
+	"fi": "30373588",
+	"fr": "30373588",
+	"gb": "30373588",
+	"hk": "10373589",
+	"hr": "30373588",
+	"hu": "30373588",
+	"ie": "30373588", // web search says discontinued :(
+	"it": "30373588",
+	"jo": "30373588",
+	"jp": "10373589",
+	"kr": "10373589",
+	"kw": "30373588",
+	"lt": "30373588",
+	"my": "10373589",
+	"nl": "30373588",
+	"no": "30373588",
+	"pl": "30373588",
+	"pt": "30373588",
+	"qa": "30373588",
+	"ro": "30373588",
+	"ru": "40373597",
+	"sa": "30373588",
+	"se": "30373588",
+	"sg": "10373589",
+	"sk": "30373588",
+	"th": "10373589",
+	"tw": "10373589",
+	"us": "90373590",
+}
+
 const blahajArtNo = "30373588"
 
 type Exporter struct {
@@ -88,7 +129,7 @@ func (e *Exporter) Collect(metrics chan<- prometheus.Metric) {
 		wg.Add(1)
 		semaphore <- struct{}{}
 		go func(country string) {
-			response, err := e.stockClient.StockLevels(ctx, country, blahajArtNo)
+			response, err := e.stockClient.StockLevels(ctx, country, blahajCountryArtNo[country])
 			if err != nil {
 				e.log.Warnw("stock error", "error", err)
 			} else {

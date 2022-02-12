@@ -1393,7 +1393,11 @@
   {
     "buCode": "235",
     "name": "Vilnius",
-    "countryCode": "lt"
+    "countryCode": "lt",
+    "coordinates": [
+      54.651252,
+      25.280222
+    ]
   },
   {
     "buCode": "415",

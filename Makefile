@@ -69,7 +69,7 @@ clean: ## Cleans up everything
 	@rm -rf bin out
 
 docker: ## Builds docker image
-	docker buildx build --pull -t $(DOCKER_REPO):$(DOCKER_TAG) .
+	docker buildx build --pull --load -t $(DOCKER_REPO):$(DOCKER_TAG) .
 
 ci: lint-reports test-reports ## Executes lint and test and generates reports
 

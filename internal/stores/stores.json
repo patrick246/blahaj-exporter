@@ -3377,5 +3377,14 @@
       50.870829
     ],
     "countryCode": "be"
+  },
+  {
+    "buCode": "648",
+    "name": "Tallinn",
+    "coordinates": [
+      24.827533854687243,
+      59.338581321891425
+    ],
+    "countryCode": "ee"
   }
 ]
